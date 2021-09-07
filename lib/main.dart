@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/recipeBox.dart';
 import 'package:flutter_app/recipeListScreen.dart';
 import 'package:flutter_app/recipe_screen.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await RecipeBox.init();
   runApp(MyApp());
 }
 
